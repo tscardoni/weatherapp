@@ -1,0 +1,11 @@
+<div
+  id="temperature-data"
+  data-station="{{ station_name }}"
+  data-labels="{{ labels }}"
+  data-temperatures="{{ temperatures }}"
+  data-interval="{{ interval }}"
+>
+  <p>🌡️ Station: <strong>{{ station_name }}</strong></p>
+  <p>📌 Interval: Last {{ interval }} hour(s)</p>
+  <p>Last data update: {{ labels|safe|slice:"-10:-1" }}</p>
+</div>

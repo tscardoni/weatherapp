@@ -1,0 +1,780 @@
+{
+  "status": "ok",
+  "time_server": 1741362952,
+  "body": [
+    {
+      "_id": "70:ee:50:71:30:ae",
+      "place": {
+        "location": [9.22794373449619, 45.4832984744368],
+        "timezone": "Europe/Rome",
+        "country": "IT",
+        "altitude": 126,
+        "city": "Milan",
+        "street": "Via Felice Poggi"
+      },
+      "mark": 10,
+      "measures": {
+        "02:00:00:6b:97:be": {
+          "res": { "1741362399": [18.3, 47] },
+          "type": ["temperature", "humidity"]
+        },
+        "70:ee:50:71:30:ae": {
+          "res": { "1741362438": [1017.5] },
+          "type": ["pressure"]
+        }
+      },
+      "modules": ["02:00:00:6b:97:be"],
+      "module_types": { "02:00:00:6b:97:be": "NAModule1" }
+    },
+    {
+      "_id": "70:ee:50:02:63:52",
+      "place": {
+        "location": [9.21105980873108, 45.4839242617001],
+        "timezone": "Europe/Rome",
+        "country": "IT",
+        "altitude": 129,
+        "city": "Milan",
+        "street": "Via Carlo Gomes"
+      },
+      "mark": 10,
+      "measures": {
+        "02:00:00:15:ee:38": {
+          "res": { "1741362877": [16.6, 50] },
+          "type": ["temperature", "humidity"]
+        },
+        "70:ee:50:02:63:52": {
+          "res": { "1741362884": [1018.2] },
+          "type": ["pressure"]
+        },
+        "05:00:00:09:39:fc": {
+          "rain_60min": 0,
+          "rain_24h": 0,
+          "rain_live": 0,
+          "rain_timeutc": 1741362877
+        }
+      },
+      "modules": ["02:00:00:15:ee:38", "05:00:00:09:39:fc"],
+      "module_types": {
+        "02:00:00:15:ee:38": "NAModule1",
+        "05:00:00:09:39:fc": "NAModule3"
+      }
+    },
+    {
+      "_id": "70:ee:50:1c:76:d4",
+      "place": {
+        "location": [9.21130420000005, 45.4909169999999],
+        "timezone": "Europe/Rome",
+        "country": "IT",
+        "altitude": 130,
+        "city": "Milan",
+        "street": "Via Ferrante Aporti"
+      },
+      "mark": 10,
+      "measures": {
+        "02:00:00:1c:7e:c8": {
+          "res": { "1741362484": [21.9, 32] },
+          "type": ["temperature", "humidity"]
+        },
+        "70:ee:50:1c:76:d4": {
+          "res": { "1741362531": [1016.7] },
+          "type": ["pressure"]
+        }
+      },
+      "modules": ["02:00:00:1c:7e:c8"],
+      "module_types": { "02:00:00:1c:7e:c8": "NAModule1" }
+    },
+    {
+      "_id": "70:ee:50:65:51:44",
+      "place": {
+        "location": [9.214272, 45.487057],
+        "timezone": "Europe/Rome",
+        "country": "IT",
+        "altitude": 127,
+        "city": "Milan",
+        "street": "Viale Brianza"
+      },
+      "mark": 10,
+      "measures": {
+        "02:00:00:65:69:c0": {
+          "res": { "1741362887": [17.3, 40] },
+          "type": ["temperature", "humidity"]
+        },
+        "70:ee:50:65:51:44": {
+          "res": { "1741362938": [1019.6] },
+          "type": ["pressure"]
+        },
+        "05:00:00:0a:03:2e": {
+          "rain_60min": 0,
+          "rain_24h": 0,
+          "rain_live": 0,
+          "rain_timeutc": 1741362932
+        }
+      },
+      "modules": ["02:00:00:65:69:c0", "05:00:00:0a:03:2e"],
+      "module_types": {
+        "02:00:00:65:69:c0": "NAModule1",
+        "05:00:00:0a:03:2e": "NAModule3"
+      }
+    },
+    {
+      "_id": "70:ee:50:13:80:c6",
+      "place": {
+        "location": [9.21098259140476, 45.4969267614717],
+        "timezone": "Europe/Rome",
+        "country": "IT",
+        "altitude": 130,
+        "city": "Milan",
+        "street": "Via Gianfranco Zuretti"
+      },
+      "mark": 10,
+      "measures": {
+        "02:00:00:13:66:88": {
+          "res": { "1741362836": [16.6, 45] },
+          "type": ["temperature", "humidity"]
+        },
+        "70:ee:50:13:80:c6": {
+          "res": { "1741362871": [1013.2] },
+          "type": ["pressure"]
+        }
+      },
+      "modules": ["02:00:00:13:66:88"],
+      "module_types": { "02:00:00:13:66:88": "NAModule1" }
+    },
+    {
+      "_id": "70:ee:50:83:af:2a",
+      "place": {
+        "location": [9.217137, 45.49597],
+        "timezone": "Europe/Rome",
+        "country": "IT",
+        "altitude": 132,
+        "city": "Milan",
+        "street": "Via Popoli Uniti"
+      },
+      "mark": 10,
+      "measures": {
+        "02:00:00:83:7b:e0": {
+          "res": { "1741362863": [17.4, 44] },
+          "type": ["temperature", "humidity"]
+        },
+        "70:ee:50:83:af:2a": {
+          "res": { "1741362865": [1019.6] },
+          "type": ["pressure"]
+        }
+      },
+      "modules": ["02:00:00:83:7b:e0"],
+      "module_types": { "02:00:00:83:7b:e0": "NAModule1" }
+    },
+    {
+      "_id": "70:ee:50:84:90:2e",
+      "place": {
+        "location": [9.219644, 45.484087],
+        "timezone": "Europe/Rome",
+        "country": "IT",
+        "altitude": 123,
+        "city": "Milan",
+        "street": "Piazza Aspromonte"
+      },
+      "mark": 10,
+      "measures": {
+        "02:00:00:84:9a:12": {
+          "res": { "1741362524": [16.4, 44] },
+          "type": ["temperature", "humidity"]
+        },
+        "70:ee:50:84:90:2e": {
+          "res": { "1741362559": [1016] },
+          "type": ["pressure"]
+        },
+        "05:00:00:08:d5:d6": {
+          "rain_60min": 0,
+          "rain_24h": 0,
+          "rain_live": 0,
+          "rain_timeutc": 1741362550
+        }
+      },
+      "modules": ["02:00:00:84:9a:12", "05:00:00:08:d5:d6"],
+      "module_types": {
+        "02:00:00:84:9a:12": "NAModule1",
+        "05:00:00:08:d5:d6": "NAModule3"
+      }
+    },
+    {
+      "_id": "70:ee:50:7a:91:5c",
+      "place": {
+        "location": [9.21884691810848, 45.4937985564999],
+        "timezone": "Europe/Rome",
+        "country": "IT",
+        "altitude": 129,
+        "city": "Milan",
+        "street": "Viale Monza"
+      },
+      "mark": 10,
+      "measures": {
+        "02:00:00:7a:a1:ca": {
+          "res": { "1741362725": [16.1, 46] },
+          "type": ["temperature", "humidity"]
+        },
+        "70:ee:50:7a:91:5c": {
+          "res": { "1741362731": [1015.8] },
+          "type": ["pressure"]
+        }
+      },
+      "modules": ["02:00:00:7a:a1:ca"],
+      "module_types": { "02:00:00:7a:a1:ca": "NAModule1" }
+    },
+    {
+      "_id": "70:ee:50:12:aa:36",
+      "place": {
+        "location": [9.22009399999995, 45.4928399997998],
+        "timezone": "Europe/Rome",
+        "country": "IT",
+        "altitude": 132,
+        "city": "Milan",
+        "street": "Via Pietro Crespi"
+      },
+      "mark": 10,
+      "measures": {
+        "02:00:00:74:78:b6": {
+          "res": { "1741362846": [18.2, 41] },
+          "type": ["temperature", "humidity"]
+        },
+        "70:ee:50:12:aa:36": {
+          "res": { "1741362889": [1019.6] },
+          "type": ["pressure"]
+        }
+      },
+      "modules": ["02:00:00:74:78:b6"],
+      "module_types": { "02:00:00:74:78:b6": "NAModule1" }
+    },
+    {
+      "_id": "70:ee:50:9d:1e:52",
+      "place": {
+        "location": [9.22149, 45.49274],
+        "timezone": "Europe/Rome",
+        "country": "IT",
+        "altitude": 130,
+        "city": "Milan",
+        "street": "Via Marco Aurelio"
+      },
+      "mark": 10,
+      "measures": {
+        "02:00:00:a2:4e:66": {
+          "res": { "1741362360": [17.8, 36] },
+          "type": ["temperature", "humidity"]
+        },
+        "70:ee:50:9d:1e:52": {
+          "res": { "1741362405": [1016.2] },
+          "type": ["pressure"]
+        }
+      },
+      "modules": ["02:00:00:a2:4e:66"],
+      "module_types": { "02:00:00:a2:4e:66": "NAModule1" }
+    },
+    {
+      "_id": "70:ee:50:27:93:ca",
+      "place": {
+        "location": [9.220423, 45.493497],
+        "timezone": "Europe/Rome",
+        "country": "IT",
+        "altitude": 128,
+        "city": "Milan",
+        "street": "Via Termopili"
+      },
+      "mark": 1,
+      "measures": {
+        "02:00:00:9d:27:1c": {
+          "res": { "1741362626": [15.3, 44] },
+          "type": ["temperature", "humidity"]
+        },
+        "70:ee:50:27:93:ca": {
+          "res": { "1741362673": [1020.4] },
+          "type": ["pressure"]
+        }
+      },
+      "modules": ["02:00:00:9d:27:1c"],
+      "module_types": { "02:00:00:9d:27:1c": "NAModule1" }
+    },
+    {
+      "_id": "70:ee:50:27:83:4e",
+      "place": {
+        "location": [9.223851, 45.483439],
+        "timezone": "Europe/Rome",
+        "country": "IT",
+        "altitude": 132,
+        "city": "Milan",
+        "street": "Viale Lombardia"
+      },
+      "mark": 10,
+      "measures": {
+        "02:00:00:27:85:ee": {
+          "res": { "1741362336": [15.9, 48] },
+          "type": ["temperature", "humidity"]
+        },
+        "70:ee:50:27:83:4e": {
+          "res": { "1741362358": [1019.7] },
+          "type": ["pressure"]
+        }
+      },
+      "modules": ["02:00:00:27:85:ee"],
+      "module_types": { "02:00:00:27:85:ee": "NAModule1" }
+    },
+    {
+      "_id": "70:ee:50:2b:06:a2",
+      "place": {
+        "location": [9.2244972, 45.4884476],
+        "timezone": "Europe/Rome",
+        "country": "IT",
+        "altitude": 132,
+        "city": "Milan",
+        "street": "Via Pietro Crespi"
+      },
+      "mark": 10,
+      "measures": {
+        "02:00:00:2b:66:16": {
+          "res": { "1741362884": [16.8, 46] },
+          "type": ["temperature", "humidity"]
+        },
+        "70:ee:50:2b:06:a2": {
+          "res": { "1741362926": [1024.9] },
+          "type": ["pressure"]
+        }
+      },
+      "modules": ["02:00:00:2b:66:16"],
+      "module_types": { "02:00:00:2b:66:16": "NAModule1" }
+    },
+    {
+      "_id": "70:ee:50:a9:6b:74",
+      "place": {
+        "location": [9.224524, 45.488606],
+        "timezone": "Europe/Rome",
+        "country": "IT",
+        "altitude": 133,
+        "city": "Milan",
+        "street": "Piazza Francesco Durante"
+      },
+      "mark": 10,
+      "measures": {
+        "02:00:00:a9:87:76": {
+          "res": { "1741362368": [16.8, 39] },
+          "type": ["temperature", "humidity"]
+        },
+        "70:ee:50:a9:6b:74": {
+          "res": { "1741362416": [1017] },
+          "type": ["pressure"]
+        }
+      },
+      "modules": ["02:00:00:a9:87:76"],
+      "module_types": { "02:00:00:a9:87:76": "NAModule1" }
+    },
+    {
+      "_id": "70:ee:50:65:7b:2a",
+      "place": {
+        "location": [9.22664859999995, 45.4838095],
+        "timezone": "Europe/Rome",
+        "country": "IT",
+        "altitude": 124,
+        "city": "Milan",
+        "street": "Via Ampère"
+      },
+      "mark": 10,
+      "measures": {
+        "02:00:00:65:50:86": {
+          "res": { "1741362806": [16.1, 47] },
+          "type": ["temperature", "humidity"]
+        },
+        "70:ee:50:65:7b:2a": {
+          "res": { "1741362808": [1018.5] },
+          "type": ["pressure"]
+        }
+      },
+      "modules": ["02:00:00:65:50:86"],
+      "module_types": { "02:00:00:65:50:86": "NAModule1" }
+    },
+    {
+      "_id": "70:ee:50:27:82:5e",
+      "place": {
+        "location": [9.22632, 45.486384],
+        "timezone": "Europe/Rome",
+        "country": "IT",
+        "altitude": 126,
+        "city": "Milan",
+        "street": "Via Andre\' Marie Ampere"
+      },
+      "mark": 1,
+      "measures": {
+        "02:00:00:63:0a:96": {
+          "res": { "1741362645": [20.8, 37] },
+          "type": ["temperature", "humidity"]
+        },
+        "70:ee:50:27:82:5e": {
+          "res": { "1741362689": [1020.8] },
+          "type": ["pressure"]
+        }
+      },
+      "modules": ["02:00:00:63:0a:96"],
+      "module_types": { "02:00:00:63:0a:96": "NAModule1" }
+    },
+    {
+      "_id": "70:ee:50:b5:28:bc",
+      "place": {
+        "location": [9.22604722352216, 45.4886621845491],
+        "timezone": "Europe/Rome",
+        "country": "IT",
+        "altitude": 126,
+        "city": "Milan",
+        "street": "Piazza San Materno"
+      },
+      "mark": 10,
+      "measures": {
+        "02:00:00:b5:48:3a": {
+          "res": { "1741362507": [15.4, 40] },
+          "type": ["temperature", "humidity"]
+        },
+        "70:ee:50:b5:28:bc": {
+          "res": { "1741362515": [1018.3] },
+          "type": ["pressure"]
+        },
+        "05:00:00:0c:0b:2e": {
+          "rain_60min": 0,
+          "rain_24h": 0,
+          "rain_live": 0,
+          "rain_timeutc": 1741362513
+        }
+      },
+      "modules": ["05:00:00:0c:0b:2e", "02:00:00:b5:48:3a"],
+      "module_types": {
+        "05:00:00:0c:0b:2e": "NAModule3",
+        "02:00:00:b5:48:3a": "NAModule1"
+      }
+    },
+    {
+      "_id": "70:ee:50:32:f0:1c",
+      "place": {
+        "location": [9.22354030609131, 45.4905166625977],
+        "timezone": "Europe/Rome",
+        "country": "IT",
+        "altitude": 129,
+        "city": "Milan",
+        "street": "Via Francesco Predabissi"
+      },
+      "mark": 1,
+      "measures": {
+        "02:00:00:32:d0:60": {
+          "res": { "1741362415": [23.4, 42] },
+          "type": ["temperature", "humidity"]
+        },
+        "70:ee:50:32:f0:1c": {
+          "res": { "1741362454": [1021.8] },
+          "type": ["pressure"]
+        }
+      },
+      "modules": ["02:00:00:32:d0:60"],
+      "module_types": { "02:00:00:32:d0:60": "NAModule1" }
+    },
+    {
+      "_id": "70:ee:50:12:9b:f6",
+      "place": {
+        "location": [9.226466, 45.489987],
+        "timezone": "Europe/Rome",
+        "country": "IT",
+        "altitude": 125,
+        "city": "Milan",
+        "street": "Via Luigi Mancinelli"
+      },
+      "mark": 10,
+      "measures": {
+        "02:00:00:12:c2:a2": {
+          "res": { "1741362867": [18.9, 33] },
+          "type": ["temperature", "humidity"]
+        },
+        "70:ee:50:12:9b:f6": {
+          "res": { "1741362895": [1021.8] },
+          "type": ["pressure"]
+        }
+      },
+      "modules": ["02:00:00:12:c2:a2"],
+      "module_types": { "02:00:00:12:c2:a2": "NAModule1" }
+    },
+    {
+      "_id": "70:ee:50:27:a1:34",
+      "place": {
+        "location": [9.22598838052056, 45.4917185034599],
+        "timezone": "Europe/Rome",
+        "country": "IT",
+        "altitude": 132,
+        "city": "Milan",
+        "street": "Via Pietro Crespi"
+      },
+      "mark": 10,
+      "measures": {
+        "02:00:00:27:ad:a2": {
+          "res": { "1741362867": [17.7, 40] },
+          "type": ["temperature", "humidity"]
+        },
+        "70:ee:50:27:a1:34": {
+          "res": { "1741362898": [1005.1] },
+          "type": ["pressure"]
+        },
+        "05:00:00:06:5e:d6": {
+          "rain_60min": 0,
+          "rain_24h": 0,
+          "rain_live": 0,
+          "rain_timeutc": 1741362893
+        },
+        "06:00:00:07:24:20": {
+          "wind_strength": 2,
+          "wind_angle": 33,
+          "gust_strength": 4,
+          "gust_angle": 31,
+          "wind_timeutc": 1741362893
+        }
+      },
+      "modules": [
+        "05:00:00:06:5e:d6",
+        "06:00:00:07:24:20",
+        "02:00:00:27:ad:a2"
+      ],
+      "module_types": {
+        "05:00:00:06:5e:d6": "NAModule3",
+        "06:00:00:07:24:20": "NAModule2",
+        "02:00:00:27:ad:a2": "NAModule1"
+      }
+    },
+    {
+      "_id": "70:ee:50:12:bb:c2",
+      "place": {
+        "location": [9.22619819641113, 45.4929425224942],
+        "timezone": "Europe/Rome",
+        "country": "IT",
+        "altitude": 125,
+        "city": "Milan",
+        "street": "Via Giorgio Chavez"
+      },
+      "mark": 10,
+      "measures": {
+        "02:00:00:12:a1:30": {
+          "res": { "1741362803": [17.7, 39] },
+          "type": ["temperature", "humidity"]
+        },
+        "70:ee:50:12:bb:c2": {
+          "res": { "1741362831": [1019.6] },
+          "type": ["pressure"]
+        }
+      },
+      "modules": ["02:00:00:12:a1:30"],
+      "module_types": { "02:00:00:12:a1:30": "NAModule1" }
+    },
+    {
+      "_id": "70:ee:50:65:57:e0",
+      "place": {
+        "location": [9.2219140834711, 45.4960098080634],
+        "timezone": "Europe/Rome",
+        "country": "IT",
+        "altitude": 131,
+        "city": "Milan",
+        "street": "Via Bolzano"
+      },
+      "mark": 1,
+      "measures": {
+        "02:00:00:65:45:46": {
+          "res": { "1741362412": [21.6, 32] },
+          "type": ["temperature", "humidity"]
+        },
+        "70:ee:50:65:57:e0": {
+          "res": { "1741362430": [1018.9] },
+          "type": ["pressure"]
+        }
+      },
+      "modules": ["02:00:00:65:45:46"],
+      "module_types": { "02:00:00:65:45:46": "NAModule1" }
+    },
+    {
+      "_id": "70:ee:50:52:fe:48",
+      "place": {
+        "location": [9.22849416732788, 45.4958605495446],
+        "timezone": "Europe/Rome",
+        "country": "IT",
+        "altitude": 126,
+        "city": "Milan",
+        "street": "Via Padova"
+      },
+      "mark": 10,
+      "measures": {
+        "02:00:00:52:ff:1a": {
+          "res": { "1741362352": [21.3, 66] },
+          "type": ["temperature", "humidity"]
+        },
+        "70:ee:50:52:fe:48": {
+          "res": { "1741362389": [1017.1] },
+          "type": ["pressure"]
+        }
+      },
+      "modules": ["02:00:00:52:ff:1a"],
+      "module_types": { "02:00:00:52:ff:1a": "NAModule1" }
+    },
+    {
+      "_id": "70:ee:50:32:f0:d0",
+      "place": {
+        "location": [9.230374, 45.48691],
+        "timezone": "Europe/Rome",
+        "country": "IT",
+        "altitude": 131,
+        "city": "Milan",
+        "street": "Via Teodosio"
+      },
+      "mark": 10,
+      "measures": {
+        "02:00:00:32:d6:86": {
+          "res": { "1741362521": [15.9, 47] },
+          "type": ["temperature", "humidity"]
+        },
+        "70:ee:50:32:f0:d0": {
+          "res": { "1741362524": [1024.7] },
+          "type": ["pressure"]
+        }
+      },
+      "modules": ["02:00:00:32:d6:86"],
+      "module_types": { "02:00:00:32:d6:86": "NAModule1" }
+    },
+    {
+      "_id": "70:ee:50:1c:78:64",
+      "place": {
+        "location": [9.23294720000001, 45.4845176],
+        "timezone": "Europe/Rome",
+        "country": "IT",
+        "altitude": 127,
+        "city": "Milan",
+        "street": "Via Desiderio"
+      },
+      "mark": 10,
+      "measures": {
+        "02:00:00:1c:62:0c": {
+          "res": { "1741362371": [16, 44] },
+          "type": ["temperature", "humidity"]
+        },
+        "70:ee:50:1c:78:64": {
+          "res": { "1741362394": [1002.9] },
+          "type": ["pressure"]
+        }
+      },
+      "modules": ["02:00:00:1c:62:0c"],
+      "module_types": { "02:00:00:1c:62:0c": "NAModule1" }
+    },
+    {
+      "_id": "70:ee:50:71:2e:70",
+      "place": {
+        "location": [9.2332535, 45.486748],
+        "timezone": "Europe/Rome",
+        "country": "IT",
+        "altitude": 126,
+        "city": "Milan",
+        "street": "Via Eugenio Carpi"
+      },
+      "mark": 1,
+      "measures": {
+        "02:00:00:71:47:ae": {
+          "res": { "1741362353": [21.4, 31] },
+          "type": ["temperature", "humidity"]
+        },
+        "70:ee:50:71:2e:70": {
+          "res": { "1741362373": [1016.6] },
+          "type": ["pressure"]
+        }
+      },
+      "modules": ["02:00:00:71:47:ae"],
+      "module_types": { "02:00:00:71:47:ae": "NAModule1" }
+    },
+    {
+      "_id": "70:ee:50:a9:8c:10",
+      "place": {
+        "location": [9.23011429642431, 45.4889446343853],
+        "timezone": "Europe/Rome",
+        "country": "IT",
+        "altitude": 132,
+        "city": "Milan",
+        "street": "Via Casoretto"
+      },
+      "mark": 1,
+      "measures": {
+        "02:00:00:b2:b8:b0": {
+          "res": { "1741362556": [28.5, 21] },
+          "type": ["temperature", "humidity"]
+        },
+        "70:ee:50:a9:8c:10": {
+          "res": { "1741362601": [1015.6] },
+          "type": ["pressure"]
+        },
+        "05:00:00:0b:7c:4c": {
+          "rain_60min": 0,
+          "rain_24h": 0,
+          "rain_live": 0,
+          "rain_timeutc": 1741362601
+        },
+        "06:00:00:07:62:c2": {
+          "wind_strength": 2,
+          "wind_angle": 90,
+          "gust_strength": 7,
+          "gust_angle": 85,
+          "wind_timeutc": 1741362601
+        }
+      },
+      "modules": [
+        "02:00:00:b2:b8:b0",
+        "05:00:00:0b:7c:4c",
+        "06:00:00:07:62:c2"
+      ],
+      "module_types": {
+        "02:00:00:b2:b8:b0": "NAModule1",
+        "05:00:00:0b:7c:4c": "NAModule3",
+        "06:00:00:07:62:c2": "NAModule2"
+      }
+    },
+    {
+      "_id": "70:ee:50:16:1e:16",
+      "place": {
+        "location": [9.22963920000007, 45.4969623],
+        "timezone": "Europe/Rome",
+        "country": "IT",
+        "altitude": 126,
+        "city": "Milan",
+        "street": "no"
+      },
+      "mark": 10,
+      "measures": {
+        "02:00:00:15:e4:56": {
+          "res": { "1741362399": [18, 42] },
+          "type": ["temperature", "humidity"]
+        },
+        "70:ee:50:16:1e:16": {
+          "res": { "1741362421": [1017.7] },
+          "type": ["pressure"]
+        }
+      },
+      "modules": ["02:00:00:15:e4:56"],
+      "module_types": { "02:00:00:15:e4:56": "NAModule1" }
+    },
+    {
+      "_id": "70:ee:50:52:ed:cc",
+      "place": {
+        "location": [9.2305378, 45.4983839],
+        "timezone": "Europe/Rome",
+        "country": "IT",
+        "altitude": 128,
+        "city": "Milan",
+        "street": "Via Luigi Prinetti"
+      },
+      "mark": 10,
+      "measures": {
+        "02:00:00:53:43:88": {
+          "res": { "1741362829": [18.8, 40] },
+          "type": ["temperature", "humidity"]
+        },
+        "70:ee:50:52:ed:cc": {
+          "res": { "1741362878": [1019] },
+          "type": ["pressure"]
+        }
+      },
+      "modules": ["02:00:00:53:43:88"],
+      "module_types": { "02:00:00:53:43:88": "NAModule1" }
+    }
+  ]
+}

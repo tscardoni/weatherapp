@@ -1,0 +1,32 @@
+{
+  "coord": { "lon": 10.1234, "lat": 46.7890 },
+  "weather": [
+    { "id": 801, "main": "Clear", "description": "clear sky", "icon": "01d" }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 12.3,
+    "feels_like": 10.5,
+    "temp_min": 11.0,
+    "temp_max": 13.5,
+    "pressure": 1012,
+    "humidity": 80,
+    "sea_level": 1012,
+    "grnd_level": 1000
+  },
+  "visibility": 9000,
+  "wind": { "speed": 3.5, "deg": 180 },
+  "clouds": { "all": 10 },
+  "dt": 1741599999,
+  "sys": {
+    "type": 2,
+    "id": 20400,
+    "country": "IT",
+    "sunrise": 1741588000,
+    "sunset": 1741630000
+  },
+  "timezone": 3600,
+  "id": 6694000,
+  "name": "RandomCity",
+  "cod": 200
+}

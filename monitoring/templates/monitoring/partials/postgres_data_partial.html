@@ -1,0 +1,8 @@
+<div
+  id="dashboard-data"
+  data-labels="{{ labels }}"
+  data-statuses="{{ statuses }}"
+>
+  <p>📌 Interval: Last {{ interval }} hour(s)</p>
+  <p>Last data update: {{ labels|safe|slice:"-10:-1" }}</p>
+</div>

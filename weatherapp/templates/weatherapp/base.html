@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ title|default:"Weather Monitoring Project" }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS (CDN) per uno stile base -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        padding-top: 60px;
+      }
+      header,
+      footer {
+        background-color: #f8f9fa;
+        padding: 10px 0;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+  </head>
+  <body>
+    <header class="container">
+      <div class="row">
+        <div class="col text-center">
+          <h1 class="display-4">Weather Monitoring Project</h1>
+          <p class="lead">
+            A system to asynchronously monitor weather data from multiple
+            sources 🌦️
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      {% block content %}
+      <!-- Contenuto dinamico -->
+      {% endblock %}
+    </main>
+
+    <footer class="container text-center">
+      <p>
+        &copy; {{ current_year|default:"2025" }} Tom Bombadil 😁 Weather
+        Monitoring Project. All rights reserved. 🌈
+      </p>
+    </footer>
+
+    <!-- Bootstrap JS e dipendenze (CDN) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+  </body>
+</html>

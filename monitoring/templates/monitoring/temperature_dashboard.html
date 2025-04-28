@@ -1,0 +1,117 @@
+{% extends "weatherapp/base.html" %} {% block content %}
+<div class="container mt-4">
+  <h1 class="text-center">Live Temperature Monitor</h1>
+
+  <!-- Form per selezionare la stazione -->
+  <form id="station-form">
+    <label for="station-select">Select Station:</label>
+    <select
+      id="station-select"
+      name="station_id"
+      hx-get="{% url 'temperature_data_partial' %}"
+      hx-target="#temperature-data"
+      hx-trigger="change"
+      hx-include="#interval-select"
+      hx-swap="outerHTML"
+    >
+      {% for station in stations %}
+      <option value="{{ station.id }}">{{ station.name }}</option>
+      {% endfor %}
+    </select>
+
+    <!-- Form per selezionare l'intervallo -->
+    <label for="interval-select">Select Time Interval:</label>
+    <select
+      id="interval-select"
+      name="interval"
+      hx-get="{% url 'temperature_data_partial' %}"
+      hx-target="#temperature-data"
+      hx-trigger="change"
+      hx-include="#station-select"
+      hx-swap="outerHTML"
+    >
+      <option value="1h" selected>Last 1 hour</option>
+      <option value="4h">Last 4 hours</option>
+      <option value="8h">Last 8 hours</option>
+      <option value="12h">Last 12 hours</option>
+      <option value="24h">Last 24 hours</option>
+    </select>
+  </form>
+
+  <!-- Canvas per il grafico -->
+  <canvas id="temperatureChart" width="400" height="200"></canvas>
+
+  <!-- HTMX aggiorna automaticamente ogni 30s -->
+  <div
+    id="temperature-data"
+    hx-get="{% url 'temperature_data_partial' %}"
+    hx-trigger="load, every 30s"
+    hx-swap="outerHTML"
+    hx-include="#station-form, #interval-select"
+  >
+    Loading data...
+  </div>
+</div>
+<script>
+  document.body.addEventListener("htmx:afterSwap", () => {
+    console.log("✅ Temperature data updated!");
+
+    const tempDataDiv = document.getElementById("temperature-data");
+    console.log(tempDataDiv);
+    let stationName = tempDataDiv.getAttribute("data-station");
+
+    // Leggiamo i JSON già pronti
+    let labels = JSON.parse(tempDataDiv.getAttribute("data-labels"));
+    let temperatures = JSON.parse(
+      tempDataDiv.getAttribute("data-temperatures"),
+    );
+
+    console.log(`📍 Stazione: ${stationName}`);
+    console.log("🕒 Timestamp:", labels);
+    console.log("🌡️ Temperature:", temperatures);
+
+    // 🔥 Se il grafico esiste già, aggiorniamo SOLO i dati
+    if (window.temperatureChart instanceof Chart) {
+      window.temperatureChart.data.labels = labels;
+      window.temperatureChart.data.datasets[0].data = temperatures;
+      window.temperatureChart.update(); // 🚀 Aggiorna il grafico esistente
+    } else {
+      // 🎯 Al primo caricamento creiamo il grafico da zero
+      const ctx = document.getElementById("temperatureChart").getContext("2d");
+      window.temperatureChart = new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: labels,
+          datasets: [
+            {
+              label: `Temperature (${stationName})`,
+              data: temperatures,
+              backgroundColor: "rgba(54, 162, 235, 0.2)",
+              borderColor: "rgba(54, 162, 235, 1)",
+              borderWidth: 2,
+              fill: true,
+            },
+          ],
+        },
+        options: {
+          responsive: false,
+          maintainAspectRatio: false,
+          animation: {
+            duration: 500, // ⏳ Renderizza più velocemente per evitare il lag
+          },
+          plugins: {
+            legend: { position: "top" },
+          },
+        },
+      });
+    }
+    // Cambiando la stazione o l'intervallo, aggiorniamo il grafico
+    //document.getElementById("station-select").addEventListener("change", () => {
+    //  htmx.trigger("#temperature-data", "load");
+    //});
+    //document.getElementById("interval-select").addEventListener("change", () => {
+    //  htmx.trigger("#temperature-data", "load");
+    //});
+  });
+</script>
+{% endblock %}

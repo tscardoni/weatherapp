@@ -1,0 +1,57 @@
+{% extends "weatherapp/base.html" %} {% block content %}
+<div class="container mt-4">
+  <h1 class="text-center">Weather Monitoring - Task Dashboard</h1>
+
+  <div
+    id="task-stats"
+    hx-get="{% url 'task_stats_partial' %}"
+    hx-trigger="every 5s"
+    hx-swap="innerHTML"
+  >
+    <!-- Qui dentro HTMX caricherà la parte dinamica -->
+    <p>Loading stats...</p>
+  </div>
+
+  <canvas id="taskChart" width="400" height="200"></canvas>
+</div>
+<!--<div>-->
+<!--  <canvas id="myTestChart" width="400" height="200"></canvas>-->
+<!--</div>-->
+<script>
+  console.log("Chart.js Test: Inizializzazione partita!");
+  // Funzione per aggiornare il grafico dinamicamente
+  let ctxTask = document.getElementById("taskChart").getContext("2d");
+  console.log("Context caricato:", ctxTask);
+
+  let taskChart = new Chart(ctxTask, {
+    type: "doughnut",
+    data: {
+      labels: ["Success", "Failed"],
+      datasets: [
+        {
+          data: [10, 4],
+          backgroundColor: ["#4caf50", "#f44336"],
+        },
+      ],
+    },
+    options: {
+      responsive: false,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { position: "top" },
+      },
+    },
+  });
+
+  // HTMX intercetta il refresh e aggiorna i dati del grafico
+  document.body.addEventListener("htmx:afterSwap", (event) => {
+    const statsContainer = document.getElementById("stats-container");
+    const successCount = statsContainer.getAttribute("data-success");
+    const failureCount = statsContainer.getAttribute("data-failure");
+
+    console.log(`Success: ${successCount}, Failed: ${failureCount}`); // Debug
+    taskChart.data.datasets[0].data = [successCount, failureCount];
+    taskChart.update();
+  });
+</script>
+{% endblock %}

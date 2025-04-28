@@ -1,0 +1,12 @@
+<div class="text-center mt-4">
+  <h2>Last Hour Task Stats</h2>
+  <p>✅ Success: {{ success_count }}</p>
+  <p>❌ Failed: {{ failure_count }}</p>
+
+  <!-- Dati nascosti per aggiornare Chart.js -->
+  <div
+    id="stats-container"
+    data-success="{{ success_count }}"
+    data-failure="{{ failure_count }}"
+  ></div>
+</div>

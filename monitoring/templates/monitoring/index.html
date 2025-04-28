@@ -1,0 +1,21 @@
+{% extends "weatherapp/base.html" %} {% block content %}
+<h1>Weather Data Monitoring</h1>
+
+{% if message %}
+<p>{{ message }}</p>
+{% endif %}
+
+<h2>OpenWeather Data</h2>
+<form method="post">
+  {% csrf_token %} {{ open_form.as_p }}
+  <button type="submit" name="openweather_submit">
+    Fetch OpenWeather Data
+  </button>
+</form>
+
+<h2>Netatmo Data</h2>
+<form method="post">
+  {% csrf_token %} {{ netatmo_form.as_p }}
+  <button type="submit" name="netatmo_submit">Fetch Netatmo Data</button>
+</form>
+{% endblock %}

@@ -1,0 +1,7 @@
+<div id="postgres-status-container">
+  {% if status == "up" %}
+  <div style="color: green; font-size: 1.5rem">🟢 PostgreSQL is UP</div>
+  {% else %}
+  <div style="color: red; font-size: 1.5rem">🔴 PostgreSQL is DOWN</div>
+  {% endif %}
+</div>

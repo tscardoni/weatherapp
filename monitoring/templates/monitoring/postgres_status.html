@@ -1,0 +1,22 @@
+{% extends 'weatherapp/base.html' %} {% block content %}
+<h2 class="text-center">🔧 PostgreSQL Service Monitor</h2>
+
+<!-- Div contenitore che parte già con la partial caricata -->
+<div
+  id="postgres-status-container"
+  hx-get="{% url 'postgres_status_view' %}"
+  hx-trigger="every 10s"
+  hx-swap="outerHTML"
+>
+  {% include 'monitoring/partials/postgres_status_partial.html' %}
+</div>
+
+<!-- Bottone per aggiornamento manuale -->
+<button
+  hx-get="{% url 'postgres_status_view' %}"
+  hx-target="#postgres-status-container"
+  class="btn btn-primary mt-3"
+>
+  🔄 Update
+</button>
+{% endblock %}

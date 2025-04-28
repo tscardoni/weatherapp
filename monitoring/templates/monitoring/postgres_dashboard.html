@@ -1,0 +1,94 @@
+{% extends 'weatherapp/base.html' %} {% block content %}
+<h2 class="text-center">📈 PostgreSQL Availability Dashboard</h2>
+
+<!-- Form per selezionare l'intervallo -->
+<form id="interval-form" method="get" class="text-center mb-3">
+  <label for="interval-select"><strong>Select Time Range:</strong></label>
+  <select
+    name="interval"
+    id="interval-select"
+    hx-get="{% url 'postgres_dashboard' %}"
+    hx-trigger="change"
+    hx-target="#dashboard-data"
+    hx-swap="outerHTML"
+  >
+    {% for key in intervals %}
+    <option
+      value="{{ key }}"
+      {%
+      if
+      key=""
+      ="interval"
+      |string
+      %}selected{%
+      endif
+      %}
+    >
+      Last {{ key }}
+    </option>
+    {% endfor %}
+  </select>
+</form>
+
+<!-- Contenitore grafico -->
+<canvas id="postgresStatusChart" width="400" height="200"></canvas>
+
+<!-- Contenitore per il partial aggiornabile -->
+<div
+  id="dashboard-data"
+  hx-get="{% url 'postgres_dashboard' %}"
+  hx-trigger="load, every 30s"
+  hx-swap="outerHTML"
+  hx-include="#interval-select"
+    hx-target="#dashboard-data"
+>
+  <p>Loading data...</p>
+</div>
+
+<script>
+  document.addEventListener("htmx:afterSwap", () => {
+    console.log("✅ PostgreSQL data updated!");
+    const updatedData = document.getElementById("dashboard-data");
+    console.log(updatedData);
+
+    let mylabels = JSON.parse(updatedData.getAttribute("data-labels"));
+    let statuses = JSON.parse(updatedData.getAttribute("data-statuses"));
+    console.log("📊 Updated data:", mylabels, statuses);
+
+    if (window.postgresStatusChart instanceof Chart) {
+      window.postgresStatusChart.data.labels = mylabels;
+      window.postgresStatusChart.data.datasets[0].data = statuses;
+      window.postgresStatusChart.update();
+    } else  {
+      const ctx = document.getElementById("postgresStatusChart").getContext("2d");
+
+      window.postgresStatusChart = new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: mylabels,
+        datasets: [
+          {
+            label: "PostgreSQL Status (1 = UP, 0 = DOWN)",
+            data: statuses,
+            borderColor: "rgba(75, 192, 192, 1)",
+            backgroundColor: "rgba(75, 192, 192, 0.2)",
+            borderWidth: 2,
+            fill: true,
+          },
+        ],
+      },
+      options: {
+        responsive: false,
+        maintainAspectRatio: false,
+        animation: {
+          duration: 500, 
+        },
+        plugins: {
+          legend: { position: "top" },
+        },
+      },
+    });
+    }
+  });
+</script>
+{% endblock %}
